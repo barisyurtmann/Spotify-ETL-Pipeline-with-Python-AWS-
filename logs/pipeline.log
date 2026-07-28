@@ -1,0 +1,8 @@
+{"asctime": "2026-07-28 15:22:44,121", "name": "__main__", "levelname": "INFO", "message": "Bulunan .env dosyas\u0131n\u0131n konumu: 'c:\\Users\\byurtman\\Desktop\\Spotify-ETL-Pipeline-with-Python-AWS\\.env'"}
+{"asctime": "2026-07-28 15:22:44,122", "name": "__main__", "levelname": "INFO", "message": "Okunan Spotify Client ID: 'b2497cda921e4bce8e862754372621bb'"}
+{"asctime": "2026-07-28 15:22:44,122", "name": "__main__", "levelname": "INFO", "message": "Okunan Spotify Client Secret: '689d7e9de37d4718be906ea48fe8b75e'"}
+{"asctime": "2026-07-28 15:22:44,123", "name": "__main__", "levelname": "INFO", "message": "SpotifyConfig objesi sorunsuz bir \u015fekilde olu\u015fturuldu ve do\u011fruland\u0131."}
+{"asctime": "2026-07-28 15:25:00,253", "name": "__main__", "levelname": "INFO", "message": "Bulunan .env dosyasının konumu: 'c:\\Users\\byurtman\\Desktop\\Spotify-ETL-Pipeline-with-Python-AWS\\.env'"}
+{"asctime": "2026-07-28 15:25:00,257", "name": "__main__", "levelname": "INFO", "message": "Okunan Spotify Client ID: 'b2497cda921e4bce8e862754372621bb'"}
+{"asctime": "2026-07-28 15:25:00,258", "name": "__main__", "levelname": "INFO", "message": "Okunan Spotify Client Secret: '689d7e9de37d4718be906ea48fe8b75e'"}
+{"asctime": "2026-07-28 15:25:00,259", "name": "__main__", "levelname": "INFO", "message": "SpotifyConfig objesi sorunsuz bir şekilde oluşturuldu ve doğrulandı."}
