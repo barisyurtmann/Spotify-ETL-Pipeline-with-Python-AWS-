@@ -27,8 +27,8 @@ def main():
         client.authenticate()
     
         # 6. Test verisi çek (Örnek: Coldplay'in en popüler şarkıları)
-        artist_id = "4gzpq5DPGxSnKTe4SA8HAU" 
-        top_tracks = client.get_artist_top_tracks(artist_id=artist_id, market="US")
+        artist_id = "0wCKNMsqYasJBFVagjay49" 
+        top_tracks = client.get_artist_top_tracks(artist_id=artist_id, market="TR")
         
         logger.info(f"Pipeline başarıyla tamamlandı. {len(top_tracks)} şarkı çekildi.")
         

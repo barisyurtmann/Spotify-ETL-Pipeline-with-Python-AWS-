@@ -62,8 +62,8 @@ class SpotifyClient:
                 raise ValueError("Access token eksik.")
 
             # URL'yi manuel yazmak yerine base_url'den türetiyoruz
-            endpoint = f"{self.base_url}/artists/{artist_id}/top-tracks?market={market}"
-            headers = {"Authorization": f"Bearer {self.access_token}"}
+            endpoint = f"{self.base_url}/artists/{artist_id}/top-tracks"
+            headers = {"Authorization": f"Bearer {self.access_token}","User-Agent": "SpotifyETLPipeline/1.0"}
             
 
             logger.info(f"Sanatçı ID ({artist_id}) için popüler şarkılar çekiliyor...")
@@ -81,6 +81,9 @@ class SpotifyClient:
                 return tracks
 
             except requests.exceptions.RequestException as e:
+
+                if e.response is not None:
+                    logger.error(f"Spotify API Detaylı Hata Mesajı: {e.response.text}")
                 logger.error(f"Veri çekilirken API hatası oluştu: {e}")
                 raise
 
