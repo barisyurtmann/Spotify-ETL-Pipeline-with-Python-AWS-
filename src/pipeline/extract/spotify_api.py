@@ -10,7 +10,7 @@ logger = get_logger(__name__)
 
 class SpotifyClient:
     """Spotify API ile iletişimi yönetecek profesyonel istemci sınıfı."""
-    
+
     def __init__(self, config: SpotifyConfig):
         # Sınıf başlatıldığında config objesini alır ve kaydeder
         self.config = config
@@ -20,12 +20,12 @@ class SpotifyClient:
     def authenticate(self) -> None:
         """Client Credentials yöntemi ile Spotify'dan token alır."""
         logger.info("Spotify API kimlik doğrulaması başlatılıyor...")
-        
+
         # Senin bulduğun kod: Şifreleri Base64 formatına çevirme
         auth_string = f"{self.config.client_id}:{self.config.client_secret}"
         auth_bytes = auth_string.encode("utf-8")
         auth_base64 = base64.b64encode(auth_bytes).decode("utf-8")
-        
+
         url = "https://accounts.spotify.com/api/token"
         headers = {
             "Authorization": f"Basic {auth_base64}",
@@ -53,7 +53,7 @@ class SpotifyClient:
             raise # Hatayı yukarı fırlatarak pipeline'ın hatalı verilerle devam etmesini engelleriz
 
 
-    def get_artist_top_tracks(self, artist_id: str, market: str = "US") -> list:
+    def get_playlist_top_tracks(self, playlist_id: str) -> dict:
             """Belirtilen sanatçının en popüler parçalarını Spotify API'den çeker."""
             
             # 1. Geliştirme: Token var mı kontrolü
@@ -62,21 +62,25 @@ class SpotifyClient:
                 raise ValueError("Access token eksik.")
 
             # URL'yi manuel yazmak yerine base_url'den türetiyoruz
-            endpoint = f"{self.base_url}/artists/{artist_id}/top-tracks"
+            endpoint = f"{self.base_url}/playlists/{playlist_id}"
             headers = {"Authorization": f"Bearer {self.access_token}","User-Agent": "SpotifyETLPipeline/1.0"}
             
 
-            logger.info(f"Sanatçı ID ({artist_id}) için popüler şarkılar çekiliyor...")
+            logger.info(f"Playlist ID ({playlist_id})'den popüler şarkılar çekiliyor...")
+
+            params = {"market": "TR"}
 
             try:
                 # 3. Geliştirme: params ve timeout eklendi
-                response = requests.get(endpoint, headers=headers, timeout=10)
+                response = requests.get(endpoint, headers=headers, timeout=10,params=params)
                 response.raise_for_status()
-                
+
                 # API'den gelen JSON verisinden sadece 'tracks' listesini alıyoruz
                 tracks = response.json().get("tracks", [])
                 logger.info(f"Başarıyla {len(tracks)} adet şarkı çekildi.")
-                
+
+                print(response.json())
+
                 # 4. Geliştirme: Ekrana yazdırmak (print) yerine veriyi döndürüyoruz
                 return tracks
 

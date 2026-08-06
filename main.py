@@ -27,15 +27,23 @@ def main():
         client.authenticate()
     
         # 6. Test verisi çek (Örnek: Coldplay'in en popüler şarkıları)
-        artist_id = "0wCKNMsqYasJBFVagjay49" 
-        top_tracks = client.get_artist_top_tracks(artist_id=artist_id, market="TR")
-        
+        playlist_id = "6ReOmXz6Yd3u1JvjcqjbFW" 
+        top_tracks = client.get_playlist_top_tracks(playlist_id=playlist_id)
+
         logger.info(f"Pipeline başarıyla tamamlandı. {len(top_tracks)} şarkı çekildi.")
+
         
+
     except Exception as e:
         # Kodun herhangi bir yerinde hata çıkarsa, burada yakalanıp JSON olarak loglanacak
         logger.error(f"Pipeline çalışırken kritik bir hata oluştu: {e}")
         raise
 
+
+
+
+    
+
 if __name__ == "__main__":
     main()
+
