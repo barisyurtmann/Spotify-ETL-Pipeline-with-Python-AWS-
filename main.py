@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from src.pipeline.config import SpotifyConfig
 from src.pipeline.utils.logger import get_logger
 from src.pipeline.extract.spotify_api import SpotifyClient
+from src.pipeline.extract.last_fm_api import Last_fm_Client
 
 def main():
     # 1. Şifreleri .env dosyasından sisteme yükle
@@ -15,20 +16,13 @@ def main():
     logger.info("Spotify ETL Pipeline başlatılıyor...")
 
     try:
-        # 3. Config (Ayarlar) Objesini Oluştur
-        # (Şifreleri çevresel değişkenlerden çekiyoruz ki koda yazılı kalmasın)
-        config = SpotifyConfig()
 
-        # 4. Extract (Çıkarma) Katmanını Başlat
         logger.info("Extract aşaması başlatılıyor...")
-        client = SpotifyClient(config)
+        client = Last_fm_Client
         
-        # 5. Spotify'a giriş yap (Token al)
-        client.authenticate()
-    
+
         # 6. Test verisi çek (Örnek: Coldplay'in en popüler şarkıları)
-        playlist_id = "6ReOmXz6Yd3u1JvjcqjbFW" 
-        top_tracks = client.get_playlist_top_tracks(playlist_id=playlist_id)
+        top_tracks = client.get_playlist()
 
         logger.info(f"Pipeline başarıyla tamamlandı. {len(top_tracks)} şarkı çekildi.")
 

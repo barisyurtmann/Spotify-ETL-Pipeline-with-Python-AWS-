@@ -62,7 +62,7 @@ class SpotifyClient:
                 raise ValueError("Access token eksik.")
 
             # URL'yi manuel yazmak yerine base_url'den türetiyoruz
-            endpoint = f"{self.base_url}/playlists/{playlist_id}"
+            endpoint = f"{self.base_url}/playlists/{playlist_id}/tracks"
             headers = {"Authorization": f"Bearer {self.access_token}","User-Agent": "SpotifyETLPipeline/1.0"}
             
 

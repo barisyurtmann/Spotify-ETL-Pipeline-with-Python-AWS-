@@ -737,3 +737,52 @@
 {"asctime": "2026-08-06 17:17:50,728", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Playlist ID (6ReOmXz6Yd3u1JvjcqjbFW)'den popüler şarkılar çekiliyor..."}
 {"asctime": "2026-08-06 17:17:51,270", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Başarıyla 0 adet şarkı çekildi."}
 {"asctime": "2026-08-06 17:17:51,272", "name": "__main__", "levelname": "INFO", "message": "Pipeline başarıyla tamamlandı. 0 şarkı çekildi."}
+{"asctime": "2026-08-06 21:26:54,143", "name": "src.pipeline.config", "levelname": "INFO", "message": "Bulunan .env dosyasının konumu: 'C:\\Users\\baris\\Desktop\\Spotify ETL Pipeline with Python and AWS\\.env'"}
+{"asctime": "2026-08-06 21:26:54,323", "name": "__main__", "levelname": "INFO", "message": "Spotify ETL Pipeline başlatılıyor..."}
+{"asctime": "2026-08-06 21:26:54,323", "name": "__main__", "levelname": "INFO", "message": "Extract aşaması başlatılıyor..."}
+{"asctime": "2026-08-06 21:26:54,323", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Spotify API kimlik doğrulaması başlatılıyor..."}
+{"asctime": "2026-08-06 21:26:54,903", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Spotify API token'ı başarıyla alındı."}
+{"asctime": "2026-08-06 21:26:54,904", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Playlist ID (6ReOmXz6Yd3u1JvjcqjbFW)'den popüler şarkılar çekiliyor..."}
+{"asctime": "2026-08-06 21:26:55,537", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Başarıyla 0 adet şarkı çekildi."}
+{"asctime": "2026-08-06 21:26:55,538", "name": "__main__", "levelname": "INFO", "message": "Pipeline başarıyla tamamlandı. 0 şarkı çekildi."}
+{"asctime": "2026-08-06 21:28:31,612", "name": "src.pipeline.config", "levelname": "INFO", "message": "Bulunan .env dosyasının konumu: 'C:\\Users\\baris\\Desktop\\Spotify ETL Pipeline with Python and AWS\\.env'"}
+{"asctime": "2026-08-06 21:28:31,684", "name": "__main__", "levelname": "INFO", "message": "Spotify ETL Pipeline başlatılıyor..."}
+{"asctime": "2026-08-06 21:28:31,684", "name": "__main__", "levelname": "INFO", "message": "Extract aşaması başlatılıyor..."}
+{"asctime": "2026-08-06 21:28:31,684", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Spotify API kimlik doğrulaması başlatılıyor..."}
+{"asctime": "2026-08-06 21:28:32,267", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Spotify API token'ı başarıyla alındı."}
+{"asctime": "2026-08-06 21:28:32,268", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Playlist ID (6ReOmXz6Yd3u1JvjcqjbFW)'den popüler şarkılar çekiliyor..."}
+{"asctime": "2026-08-06 21:28:32,704", "name": "src.pipeline.extract.spotify_api", "levelname": "ERROR", "message": "Spotify API Detaylı Hata Mesajı: {\"error\": {\"status\": 401, \"message\": \"Valid user authentication required\" } }"}
+{"asctime": "2026-08-06 21:28:32,705", "name": "src.pipeline.extract.spotify_api", "levelname": "ERROR", "message": "Veri çekilirken API hatası oluştu: 401 Client Error: Unauthorized for url: https://api.spotify.com/v1/playlists/6ReOmXz6Yd3u1JvjcqjbFW/items?market=TR"}
+{"asctime": "2026-08-06 21:28:32,705", "name": "__main__", "levelname": "ERROR", "message": "Pipeline çalışırken kritik bir hata oluştu: 401 Client Error: Unauthorized for url: https://api.spotify.com/v1/playlists/6ReOmXz6Yd3u1JvjcqjbFW/items?market=TR"}
+{"asctime": "2026-08-06 21:28:45,154", "name": "src.pipeline.config", "levelname": "INFO", "message": "Bulunan .env dosyasının konumu: 'C:\\Users\\baris\\Desktop\\Spotify ETL Pipeline with Python and AWS\\.env'"}
+{"asctime": "2026-08-06 21:28:45,228", "name": "__main__", "levelname": "INFO", "message": "Spotify ETL Pipeline başlatılıyor..."}
+{"asctime": "2026-08-06 21:28:45,229", "name": "__main__", "levelname": "INFO", "message": "Extract aşaması başlatılıyor..."}
+{"asctime": "2026-08-06 21:28:45,229", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Spotify API kimlik doğrulaması başlatılıyor..."}
+{"asctime": "2026-08-06 21:28:45,594", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Spotify API token'ı başarıyla alındı."}
+{"asctime": "2026-08-06 21:28:45,595", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Playlist ID (6ReOmXz6Yd3u1JvjcqjbFW)'den popüler şarkılar çekiliyor..."}
+{"asctime": "2026-08-06 21:28:46,174", "name": "src.pipeline.extract.spotify_api", "levelname": "ERROR", "message": "Spotify API Detaylı Hata Mesajı: {\"error\": {\"status\": 403, \"message\": \"Forbidden\" } }"}
+{"asctime": "2026-08-06 21:28:46,174", "name": "src.pipeline.extract.spotify_api", "levelname": "ERROR", "message": "Veri çekilirken API hatası oluştu: 403 Client Error: Forbidden for url: https://api.spotify.com/v1/playlists/6ReOmXz6Yd3u1JvjcqjbFW/tracks?market=TR"}
+{"asctime": "2026-08-06 21:28:46,174", "name": "__main__", "levelname": "ERROR", "message": "Pipeline çalışırken kritik bir hata oluştu: 403 Client Error: Forbidden for url: https://api.spotify.com/v1/playlists/6ReOmXz6Yd3u1JvjcqjbFW/tracks?market=TR"}
+{"asctime": "2026-08-06 21:31:25,465", "name": "src.pipeline.config", "levelname": "INFO", "message": "Bulunan .env dosyasının konumu: 'C:\\Users\\baris\\Desktop\\Spotify ETL Pipeline with Python and AWS\\.env'"}
+{"asctime": "2026-08-06 21:31:25,538", "name": "__main__", "levelname": "INFO", "message": "Spotify ETL Pipeline başlatılıyor..."}
+{"asctime": "2026-08-06 21:31:25,538", "name": "__main__", "levelname": "INFO", "message": "Extract aşaması başlatılıyor..."}
+{"asctime": "2026-08-06 21:31:25,538", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Spotify API kimlik doğrulaması başlatılıyor..."}
+{"asctime": "2026-08-06 21:31:25,977", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Spotify API token'ı başarıyla alındı."}
+{"asctime": "2026-08-06 21:31:25,978", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Playlist ID (37i9dQZF1EQncLwOalG3K7)'den popüler şarkılar çekiliyor..."}
+{"asctime": "2026-08-06 21:31:26,423", "name": "src.pipeline.extract.spotify_api", "levelname": "ERROR", "message": "Spotify API Detaylı Hata Mesajı: {\"error\": {\"status\": 403, \"message\": \"Forbidden\" } }"}
+{"asctime": "2026-08-06 21:31:26,423", "name": "src.pipeline.extract.spotify_api", "levelname": "ERROR", "message": "Veri çekilirken API hatası oluştu: 403 Client Error: Forbidden for url: https://api.spotify.com/v1/playlists/37i9dQZF1EQncLwOalG3K7/tracks?market=TR"}
+{"asctime": "2026-08-06 21:31:26,423", "name": "__main__", "levelname": "ERROR", "message": "Pipeline çalışırken kritik bir hata oluştu: 403 Client Error: Forbidden for url: https://api.spotify.com/v1/playlists/37i9dQZF1EQncLwOalG3K7/tracks?market=TR"}
+{"asctime": "2026-08-06 21:37:04,613", "name": "src.pipeline.config", "levelname": "INFO", "message": "Bulunan .env dosyasının konumu: 'C:\\Users\\baris\\Desktop\\Spotify ETL Pipeline with Python and AWS\\.env'"}
+{"asctime": "2026-08-06 21:37:04,682", "name": "__main__", "levelname": "INFO", "message": "Spotify ETL Pipeline başlatılıyor..."}
+{"asctime": "2026-08-06 21:37:04,682", "name": "__main__", "levelname": "INFO", "message": "Extract aşaması başlatılıyor..."}
+{"asctime": "2026-08-06 21:37:04,682", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Spotify API kimlik doğrulaması başlatılıyor..."}
+{"asctime": "2026-08-06 21:37:05,094", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Spotify API token'ı başarıyla alındı."}
+{"asctime": "2026-08-06 21:37:05,095", "name": "src.pipeline.extract.spotify_api", "levelname": "INFO", "message": "Playlist ID (4Uzej4Z55XePbORpriTrbA)'den popüler şarkılar çekiliyor..."}
+{"asctime": "2026-08-06 21:37:05,499", "name": "src.pipeline.extract.spotify_api", "levelname": "ERROR", "message": "Spotify API Detaylı Hata Mesajı: {\"error\": {\"status\": 403, \"message\": \"Forbidden\" } }"}
+{"asctime": "2026-08-06 21:37:05,499", "name": "src.pipeline.extract.spotify_api", "levelname": "ERROR", "message": "Veri çekilirken API hatası oluştu: 403 Client Error: Forbidden for url: https://api.spotify.com/v1/playlists/4Uzej4Z55XePbORpriTrbA/tracks?market=TR"}
+{"asctime": "2026-08-06 21:37:05,500", "name": "__main__", "levelname": "ERROR", "message": "Pipeline çalışırken kritik bir hata oluştu: 403 Client Error: Forbidden for url: https://api.spotify.com/v1/playlists/4Uzej4Z55XePbORpriTrbA/tracks?market=TR"}
+{"asctime": "2026-08-06 23:03:34,575", "name": "src.pipeline.config", "levelname": "INFO", "message": "Bulunan .env dosyasının konumu: 'C:\\Users\\baris\\Desktop\\Spotify ETL Pipeline with Python and AWS\\.env'"}
+{"asctime": "2026-08-06 23:03:34,656", "name": "__main__", "levelname": "INFO", "message": "Spotify ETL Pipeline başlatılıyor..."}
+{"asctime": "2026-08-06 23:03:34,656", "name": "__main__", "levelname": "INFO", "message": "Extract aşaması başlatılıyor..."}
+{"asctime": "2026-08-06 23:03:34,656", "name": "__main__", "levelname": "ERROR", "message": "Pipeline çalışırken kritik bir hata oluştu: Last_fm_Client.get_playlist() missing 1 required positional argument: 'self'"}
+{"asctime": "2026-08-06 23:40:41,592", "name": "src.pipeline.config", "levelname": "INFO", "message": "Bulunan .env dosyasının konumu: 'C:\\Users\\baris\\Desktop\\Spotify ETL Pipeline with Python and AWS\\.env'"}
